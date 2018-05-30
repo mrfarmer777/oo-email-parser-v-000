@@ -14,7 +14,7 @@ class EmailParser
 
   def parse
     res=[]
-    email_array=@email_string.sub(", "," ").split(" ")  
+    email_array=@email_string.sub(","," ").sub("  "," ").split(" ")
     email_array.each do |email|
       if !res.include?(email)
         res<<email
