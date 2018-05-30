@@ -15,7 +15,7 @@ class EmailParser
   def parse
     res=[]
     email_array=@email_string.sub(", "," ")
-    elsif @email_string.include?(" ")
+    if @email_string.include?(" ")
       email_array=@email_string.split!(" ")
     else
       "No email delimiter found"
