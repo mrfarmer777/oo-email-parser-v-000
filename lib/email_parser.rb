@@ -14,12 +14,7 @@ class EmailParser
 
   def parse
     res=[]
-    email_array=@email_string.sub(", "," ")
-    if @email_string.include?(" ")
-      email_array=@email_string.split(" ")
-    else
-      "No email delimiter found"
-    end
+    email_array=@email_string.sub(", "," ").split(" ")  
     email_array.each do |email|
       if !res.include?(email)
         res<<email
